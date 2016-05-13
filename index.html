@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.mainDiv {
+			border: 1px solid black;
+			height: auto;
+			background: gray;
+		}
+		.insideDiv {
+			display: inline-block;
+			margin: 5px;
+
+		}
+	</style>
+</head>
+<body>
+<script type="text/javascript">
+		// Sual 01 -Aşağıdakı kodun netice nedir ve sebebini izah edin.
+
+
+  // var y = 1;
+  // var y = 1;
+  // if (function f(){}) {
+  //   y += typeof f; //y= y + typeof f
+  // }
+  // console.log(y);
+//şərt daxilində funksiyanın növü müəyyən olmur, buna görə undefined olur.buna görə nəticə 1undefined alınır. 
+
+
+// Sual 02 - Aşağıdakı massivin icini nece usulla bosaldmaq olar izah edin.
+
+
+   // var myArr =  ['a','b','c','d','e','f'];
+ //eger tam bosaltmaq isteyirikse:
+//var myArr = []
+//var myArr = [null]
+//eger bezi elementleri cixmaq isteyirikse
+ // splice, pop, shift, slice istifadə etməklə.
+ //document.write(myArr.slice(1,3)),
+   //document.write(myArr.splice()),
+   //document.write(myArr.shift()),
+   //document.write(myArr.pop()),
+ 
+
+//sual 3
+ // var bar = true;	//true=1, false=0
+	// console.log(bar + 0);   //1+0=1
+	// console.log(bar + "xyz");  //1+"xyz" -->concatenates-->1xyz
+	// console.log(bar + true);  //1+1=2
+	// console.log(bar + false);	//1+0=1
+
+
+
+// Sual 04 - Asagıdakı kodun neticesi nedir ve sebebini izah edin.
+ 
+ // var salary = "1000$";	
+
+ // (function () {										//burda self-invoking funksiya ancaq local-ı oxuyur
+ //     console.log("Original salary was " + salary);  	//salary heleki localda teyin edilmeyib ona gore undefined.
+ 														
+ //     var salary = "5000$";
+
+ //     console.log("My New Salary " + salary);			//salary 5000 teyin olunur ve consoleda salaryini 5000$ 
+ 														//cixarir
+ // })();
+
+//Its all about variable scoping. Variables declared in the self executing function are, by default, only available to code within the self executing function. This allows code to be written without concern of how variables are named in other blocks of javascript code.
+
+
+ // Sual 05 - 
+
+ /* Verilenler
+// var size=[[width],[height]];
+  //   var color=[];
+ 	
+
+    ----Bu verilenlere gore istifadeci terefinden girilen reqeme esasen divler yaranacaq ekranda ve bu divler 4 sütun seklinde ekranda gorunecek.Ekrandakı divlerin her setirde 3.cu yerde duran div border:2px solid red  xususiyyetine sahib olacaq.(bu meselen constructor function istifade olunaraq yazılacaq.*/
+
+//  	cvb 6
+// 	var width=[600];
+// 	var height=[100];
+//     var color=["green"];
+//     var say=[10]
+
+// 	function FunctionConstructor(width,height,color,number) {
+// 		this.width = width,
+// 		this.height = height,
+// 		this.color = color,
+// 		this.CreateDiv = function() {
+// 			document.write("<div class='mainDiv' style='width:"+this.width+"px;'>")
+
+// 		for (i=1; i < number; i++) {
+// 				if((i+1)%4==0) {
+// 					document.write("<div class='insideDiv' style='width:"+((this.width/4)-10)+"px; height:"+this.height+"px; background:"+this.color+"; border: 2px solid red'></div>")
+// 				} else {
+// 				document.write("<div class='insideDiv' style='width:"+((this.width/4)-25)+"px; height:"+this.height+"px; background:"+this.color+"'></div>")
+// 				}
+// 			}
+       
+
+
+// 		document.write("</div>");	
+// 		}
+// }
+	
+// 	for (i=0; i< width.length; i++) {
+// 	var myDiv = new FunctionConstructor(width[i],height[i],color[i],say[i]);
+// 	myDiv.CreateDiv();
+// }
+</script>
+
+</body>
+</html>
+
+	
+
+
